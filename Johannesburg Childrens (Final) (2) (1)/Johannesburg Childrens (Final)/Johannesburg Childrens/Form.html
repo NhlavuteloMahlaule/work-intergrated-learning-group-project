@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewpoint" content="width=device-width, initial scale=1.0">
+    <title>Johannesburg Children's Home </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+   <nav>
+      <img src="JCH_logo.png" class="Logo">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About Us.html">About Us</a></li>
+            <li><a href="Photos.html">Photos</a></li>
+            <li><a href="Donation.html">Donations</a></li>
+            <li><a href="HireHall.html">Donations</a></li>
+            <li><a href="OrderPlatter.html">Order a Platter</a></li>
+            <li><a href="Programmes.html">Programmes</a></li>
+            <li><a href="Thrift.html">Thrift Store</a></li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+            <li><a href="Form.html">Forms</a></li>
+        </ul>
+        <div>
+            <a href="Log In.html" class="LogIn-btn">Log In</a>
+        </div>
+   </nav>
+ 
+<body> 
+  <form onsubmit="sendEmail(); reset(); return false" >
+<div style="max-width: 400px;">
+</div>
+<div style="padding-bottom: 18px;font-size : 24px;">Volunteer Registration</div>
+<div style="display: flex; padding-bottom: 18px;max-width : 450px;">
+<div style=" margin-left: 0; margin-right: 1%; width: 49%;">First name<span style="color: red;"> *</span><br/>
+<input type="text" id="data_2" name="data_2" style="max-width: 100%;" class="form-control"/>
+</div>
+<div style=" margin-left: 1%; margin-right: 0; width: 49%;">Last name<span style="color: red;"> *</span><br/>
+<input type="text" id="data_3" name="data_3" style="max-width: 100%;" class="form-control"/>
+</div>
+</div><div style="padding-bottom: 18px;">Email Address<br/>
+<input type="text" id="data_4" name="data_4" style="max-width : 450px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 18px;">Mobile phone<br/>
+<input type="text" id="data_5" name="data_5" style="max-width : 250px;" class="form-control"/>
+</div>
+  <div style="padding-bottom: 18px;">Date<br/>
+  <input type="Date" id="data_6" name="data_6" style="max-width : 250px;" class="form-control"/>
+</div>
+<div>
+  <div style="padding-bottom: 18px;">Time<br/>
+  <input type="time" id="data_7" name="data_7"style="max-width : 250px;" class="form-control"/>
+  </div>
+
+<div style="padding-bottom: 18px;">What can you help us with?<br/>
+<span><input type="checkbox" id="data_8_0" name="data_8" value="Sorting Donations"/>Sorting Donations </span><br/>
+<span><input type="checkbox" id="data_8_1" name="data_8" value="Stock and serve customers at the thrift store"/> Stock and serve customers at the thrift store</span><br/>
+<span><input type="checkbox" id="data_8_2" name="data_8" value="Ad hoc maintenance work"/> Ad hoc maintenance work</span><br/>
+<span><input type="checkbox" id="data_8_3" name="data_8" value="Developments Projects"/> Developments Projects</span><br/>
+<span><input type="checkbox" id="data_8_4" name="data_8" value="Skills transfer"/> Skills transfer</span><br/>
+<span><input type="checkbox" id="data_8_5" name="data_8" value="Visit"/> Visit</span><br/>
+</div>
+<div>
+    <button type ="submit">Send</button>
+</div>
+
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+    Email.send({
+    Host : "Jchsquare2023@gmail.com" ,
+    Username : "JCH_Square",
+    Password : "Jch@2023",
+    To :"Jchsquare2023@gmail.com",
+    From : "Jchsquare2023@gmail.com",
+    Subject : "Confirmaion letter",
+    Body : "Dear Sir/Madam" +
+          "Your volunteer form has being successful. We will see you on" + document.getElementById("Date") + document.getElementById("Time") + "hope to see you."
+  
+}).then(
+  message => alert("Message sent successfully"));
+}
+</script>
+</form>
+
+<script type="text/javascript">
+function validateForm() {
+if (isEmpty(document.getElementById('data_2').value.trim())) {
+alert('First name is required!');
+return false;
+}
+if (isEmpty(document.getElementById('data_3').value.trim())) {
+alert('Last name is required!');
+return false;
+}
+if (!validateEmail(document.getElementById('data_4').value.trim())) {
+alert('Email must be a valid email address!');
+return false;
+}
+return true;
+}
+function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+function validateEmail(email) {
+var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+return isEmpty(email) || re.test(email);
+}
+</script>
+
+
+<footer class="footer">
+  <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+  <ul class="social-icon">
+    <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/thejohannesburgchildrenshome">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="https://twitter.com/i/flow/login?redirect_after_login=%2FJhbChildHome">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="https://za.linkedin.com/company/the-johannesburg-children-s-home">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fjohannesburg_childrens_home%2F%3Figshid%3DOGQ5ZDc2ODk2ZA%253D%253D">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a></li>
+  </ul>
+  <ul class="menu">
+    <li class="menu__item"><a class="menu__link" href="Home.html">Home</a></li>
+    <li class="menu__item"><a class="menu__link" href="About Us.html">About Us</a></li>
+    <li class="menu__item"><a class="menu__link" href="Photos.html">Photos</a></li>
+    <li class="menu__item"><a class="menu__link" href="Ways.html">Ways to Help</a></li>
+    <li class="menu__item"><a class="menu__link" href="Programmes.html">Programmes</a></li>
+    <li class="menu__item"><a class="menu__link" href="Thrift.html">Thrift Store</a></li>
+    <li class="menu__item"><a class="menu__link" href="Contact Us.html">Contact Us</a></li>
+    <li class="menu__item"><a class="menu__link" href="Form.html">Form</a></li>
+
+  </ul>
+  <p>&copy;2023 Johannesburg Children’s Home | All Rights Reserved</p>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

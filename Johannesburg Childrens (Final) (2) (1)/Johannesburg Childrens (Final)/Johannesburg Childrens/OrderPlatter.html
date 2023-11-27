@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johannesburg Children's Home</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Linking JavaScript file -->
+    <script src="Payment.js" defer></script>
+</head>
+
+<nav>
+    <img src="JCH_logo.png" class="Logo">
+      <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About Us.html">About Us</a></li>
+          <li><a href="Photos.html">Photos</a></li>
+          <li><a href="Donation.html">Donations</a></li>
+          <li><a href="OrderPlatter.html">Order a Platter</a></li>
+          <li><a href="HireHall.html">Hire a Hall</a></li>
+          <li><a href="Programmes.html">Programmes</a></li>
+          <li><a href="Thrift.html">Thrift Store</a></li>
+          <li><a href="Contact Us.html">Contact Us</a></li>
+          <li><a href="Form.html">Forms</a></li>
+      </ul>
+      <div>
+          <a href="Log In.html" class="LogIn-btn">Log In</a>
+      </div>
+ </nav>
+
+<body>
+
+    <h5>Order a Platter</h5>
+
+    <div class="slideshow-container">
+
+        <!-- Slide 1 -->
+        <div class="mySlides">
+            <div class="slide-content">
+                <img src="fruitplatter.jpg" class="center">
+                <div class="description">Fresh and delicious fruit platter with berries, pineaple, watermelon, grapes, kiwi, and other fruits</div>
+                <div class="name">Fruit Platter</div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="mySlides">
+            <div class="slide-content">
+                <img src="meatplatter.png" class="center">
+                <div class="description">Succulent meat platter</div>
+                <div class="name">Meat Platter</div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="mySlides">
+            <div class="slide-content">
+                <img src="meatoption.jpg" class="center">
+                <div class="description">Variety of meat options</div>
+                <div class="name">Meat Option</div>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="mySlides">
+            <div class="slide-content">
+                <img src="sandwichplatter.jpg" class="center">
+                <div class="description">Delicious sandwich platter</div>
+                <div class="name">Sandwich Platter</div>
+            </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="mySlides">
+            <div class="slide-content">
+                <img src="vegplatter.jpg" class="center">
+                <div class="description">Fresh and healthy vegetable platter</div>
+                <div class="name">Vegetable Platter</div>
+            </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="mySlides">
+            <div class="slide-content">
+                <img src="savouryplatter.png" class="center">
+                <div class="description">Savoury and tasty platter</div>
+                <div class="name">Savoury Platter</div>
+            </div>
+        </div>
+
+        <!-- Navigation dots -->
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <p></p>
+
+    <style>
+        /* Add styles for slideshow */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Add styles for slide content */
+        .slide-content {
+            text-align: center;
+        }
+
+        .description, .name {
+            margin-top: 10px;
+        }
+
+        /* Add styles for navigation dots */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+    </style>
+
+    <!-- Add JavaScript for slideshow functionality -->
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+        }
+    </script>
+
+ <!-- Payment Form -->
+ <section id="payment-form" class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <h2> Order a Platter</h2>
+            <form id="clientPaymentForm">
+                <div style="padding-bottom: 18px;font-size : 24px;">Make a Payment to order platters</div>
+<div style="display: flex; padding-bottom: 18px;max-width : 450px;">
+<div style=" margin-left: 0; margin-right: 1%; width: 49%;">First name<span style="color: red;"> *</span><br/>
+<input type="text" id="data_2" name="data_2" style="max-width: 100%;" class="form-control"/>
+</div>
+</div><div style="padding-bottom: 18px;">Email Address<br/>
+<input type="text" id="data_4" name="data_4" style="max-width : 450px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 18px;">Mobile phone<br/>
+<input type="text" id="data_5" name="data_5" style="max-width : 250px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 18px;">Date<br/>
+<input type="Date" id="data_6" name="data_6" style="max-width : 250px;" class="form-control"/>
+</div>
+               <div class="form-group", style="padding-bottom: 18px;">
+                    <label for="licenseType">Type of License:</label>
+                    <select class="form-control" id="licenseType" required>
+                        <option value="">Select License Type</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Premium">Premium</option>
+                        <option value="Ultimate">Ultimate</option>
+                    </select>
+                </div>
+                <div class="form-group", style="padding-bottom: 18px;">
+                    <label for="Amount">Amount:</label>
+                    <input type="text" class="form-control" id="Amount" placeholder="Amount" required>
+                </div>
+                
+                <div class="form-group", style="padding-bottom: 18px;">
+                    <label for="cardName">Name on Credit Card/Debit Card:</label>
+                    <input type="text" class="form-control" id="cardName" placeholder="Card Name" required>
+                </div>
+
+                <div class="form-group",style="padding-bottom: 18px;">
+                    <label for="cardType">Credit Card/Debit Card Type:</label>
+                    <select class="form-control" id="cardType" required>
+                        <option value="Visa">Visa</option>
+                        <option value="Mastercard">Mastercard</option>
+                        <option value="American Express">American Express</option>
+                    </select>
+                </div>
+
+                <div class="form-group",style="padding-bottom: 18px;">
+                    <label for="cardNumber">Credit Card/Debit Card Number:</label>
+                    <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 1234 5678" maxlength="19" required>
+                </div>
+
+                <div class="form-group",style="padding-bottom: 18px;">
+                    <label for="expiryDate">Expiration Date:</label>
+                    <div class="row">
+                        <div class="col",style="padding-bottom: 18px;">
+                            <select class="form-control" id="expiryMonth" required>
+                                <option value="">Month</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+
+                        <div class="col",style="padding-bottom: 18px;">
+                            <select class="form-control" id="expiryYear" required>
+                                <option value="">Year</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2026">2027</option>
+                                <option value="2026">2028</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-group", style="padding-bottom: 18px;">
+                    <label for="cvc">CVC Number:</label>
+                    <input type="number" class="form-control" id="cvc" placeholder="123" maxlength="3" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit Payment</button>
+            </form>
+        </div>
+    </div>
+                     <!-- Pop-up message -->
+<div id="popup" class="popup">
+    <p id="popup-message"></p>
+    <button onclick="closePopup()">Close</button>
+</div>
+
+<script>
+    function openPopup(message) {
+        document.getElementById('popup-message').innerText = message;
+        document.getElementById('popup').style.display = 'block';
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    // Example: Show a pop-up message when the form is submitted
+    document.getElementById('clientPaymentForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from submitting (for demonstration purposes)
+
+        // Perform your form submission logic here
+
+        // Show a pop-up message
+        openPopup('Platter is successfully order!');
+    });
+</script>
+    <footer class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+          </div>
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/thejohannesburgchildrenshome">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="https://twitter.com/i/flow/login?redirect_after_login=%2FJhbChildHome">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="https://za.linkedin.com/company/the-johannesburg-children-s-home">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fjohannesburg_childrens_home%2F%3Figshid%3DOGQ5ZDc2ODk2ZA%253D%253D">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="Home.html">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="About Us.html">About Us</a></li>
+          <li class="menu__item"><a class="menu__link" href="Photos.html">Photos</a></li>
+          <li class="menu__item"><a class="menu__link" href="Ways.html">Ways to Help</a></li>
+          <li class="menu__item"><a class="menu__link" href="Programmes.html">Programmes</a></li>
+          <li class="menu__item"><a class="menu__link" href="Thrift.html">Thrift Store</a></li>
+          <li class="menu__item"><a class="menu__link" href="Contact Us.html">Contact Us</a></li>
+          <li class="menu__item"><a class="menu__link" href="Form.html">Form</a></li>
+    
+        </ul>
+        <p>&copy;2023 Johannesburg Children’s Home | All Rights Reserved</p>
+      </footer>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+       
+
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>
